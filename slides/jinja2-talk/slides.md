@@ -300,20 +300,21 @@ color: sky
 
 ```ini
 # Simulation Resolution
-time_step = {time_step}
-solution_polynomial_order = {polynomial_order}
+time_step = {{ time_step }}
+solution_polynomial_order = {{ polynomial_order }}
 
 # Particles
-{% for particle in particles %} # For loops!
-particle{loop.index}_name = {particle.name} 
-particle{loop.index}_mass = {particle.mass}
-particle{loop.index}_charge = {particle.charge}
+{% for particle in particles %}
+particle{{ loop.index }}_name = {{ particle.name }}
+particle{{ loop.index }}_mass = {{ particle.mass }}
+particle{{ loop.index }}_charge = {{ particle.charge }}
 {% endfor %}
 
 # Output
 print_frequency = 100
-{% if export_currents %} # If statements!
-export_currents = True
+export_currents = {{ export_currents }}
+{% if export_currents %}
+currents_units = 'mA'
 {% endif %}
 
 ...

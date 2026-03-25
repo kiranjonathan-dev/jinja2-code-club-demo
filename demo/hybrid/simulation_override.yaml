@@ -1,0 +1,5 @@
+time_step: 0.02
+particles:
+  - name: "'alpha'"
+    mass: 6.64e-27
+    charge: 3.2e-19

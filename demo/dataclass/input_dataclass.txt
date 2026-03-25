@@ -1,0 +1,20 @@
+# Simulation Resolution
+time_step = 0.01
+solution_polynomial_order = 3
+
+# Particles
+
+particle1_name = 'electron'
+particle1_mass = 9.11e-31
+particle1_charge = -1.6e-19
+
+particle2_name = 'proton'
+particle2_mass = 1.67e-27
+particle2_charge = 1.6e-19
+
+
+# Output
+print_frequency = 100
+export_currents = True
+
+currents_units = 'mA'

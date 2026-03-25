@@ -1,0 +1,14 @@
+# Simulation Resolution
+time_step = 0.02
+solution_polynomial_order = 3
+
+# Particles
+
+particle1_name = 'alpha'
+particle1_mass = 6.64e-27
+particle1_charge = 3.2e-19
+
+
+# Output
+print_frequency = 100
+export_currents = False
