@@ -283,7 +283,7 @@ color: sky
   - `template.render(time_step=1e-10, polynomial_order=2, ...)`
 - This means you can easily use unstructured/semi-structured input:
   - `template.render(**some_dictionary)`
-  - `template.render(**some_dataclass.as_dict())`
+  - `template.render(**asdict(some_dataclass))`
 
 ---
 layout: top-title-two-cols
