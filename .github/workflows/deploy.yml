@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+defaults:
+  run:
+    working-directory: ./slides/jinja2-talk
+
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -32,14 +36,15 @@ jobs:
         run: nci
 
       - name: Build
-        run: nr build --base /${{github.event.repository.name}}/
+        run: nr build --base /${{ github.event.repository.name }}/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./slides/jinja2-talk/dist 
 
   deploy:
     environment:
